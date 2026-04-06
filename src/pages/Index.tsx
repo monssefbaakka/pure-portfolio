@@ -52,6 +52,11 @@ const experience = [
 
 const education = [
   {
+    period: "2020 - 2022",
+    title: "Computer Science Studies in China",
+    subtitle: "Completed 2 years of computer science studies before continuing my engineering path.",
+  },
+  {
     period: "10/2022 - Present",
     title: "Engineering in Computer Science and Networks",
     subtitle: "EMSI, Rabat",
@@ -72,16 +77,25 @@ const projects = [
 
 const certifications = [
   {
+    image: work1,
     name: "Application Back-end",
     role: "Certification",
     quote:
       "Back-end certification listed on my CV, supporting my practical work on server-side and application architecture.",
   },
   {
+    image: work2,
     name: "The Full Stack",
     role: "Certification",
     quote:
       "Full-stack certification backed by project experience across frontend, backend, databases, and deployment workflows.",
+  },
+  {
+    image: work3,
+    name: "ALX Software Engineering Program",
+    role: "Certificate",
+    quote:
+      "Intensive ALX training in full-stack engineering and DevOps, reinforced through real project delivery and autonomous learning.",
   },
 ];
 
@@ -151,6 +165,16 @@ const fadeUp = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
+const portfolioCard = {
+  hidden: { opacity: 0, y: 40, scale: 0.96 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    scale: 1,
+    transition: { duration: 0.75, ease: [0.22, 1, 0.36, 1] },
   },
 };
 
@@ -417,30 +441,41 @@ const Index = () => {
               {projects.map((project) => (
                 <motion.article
                   key={`${project.title}-${project.category}`}
-                  variants={fadeUp}
-                  whileHover={{ y: -8 }}
+                  variants={portfolioCard}
+                  whileHover={{ y: -10 }}
                   className="group"
                 >
-                  <div className="overflow-hidden rounded-sm bg-[#e8edf3]">
+                  <motion.div
+                    className="overflow-hidden rounded-sm bg-[#e8edf3] shadow-[0_10px_30px_rgba(15,23,42,0.06)] transition-shadow duration-300 group-hover:shadow-[0_24px_50px_rgba(15,23,42,0.14)]"
+                    whileHover={{ rotate: -0.4 }}
+                  >
                     <motion.img
                       src={project.image}
                       alt={project.title}
                       className="h-64 w-full object-cover transition duration-500 group-hover:scale-[1.03]"
-                      whileHover={{ scale: 1.04 }}
+                      whileHover={{ scale: 1.08 }}
                       transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                     />
-                  </div>
-                  <div className="mt-4">
-                    <div className="text-[10px] uppercase tracking-[0.24em] text-slate-500">
+                  </motion.div>
+                  <motion.div className="mt-4" initial={false} whileHover="hover">
+                    <motion.div
+                      className="text-[10px] uppercase tracking-[0.24em] text-slate-500"
+                      variants={{ hover: { x: 4, color: "#0f172a" } }}
+                    >
                       {project.category}
-                    </div>
+                    </motion.div>
                     <div className="mt-2 flex items-start justify-between gap-3">
-                      <h3 className="text-base font-semibold tracking-[-0.03em] text-slate-950">
+                      <motion.h3
+                        className="text-base font-semibold tracking-[-0.03em] text-slate-950"
+                        variants={{ hover: { x: 6 } }}
+                      >
                         {project.title}
-                      </h3>
-                      <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-400 transition group-hover:text-slate-950" />
+                      </motion.h3>
+                      <motion.div variants={{ hover: { x: 4, y: -4, scale: 1.08 } }}>
+                        <ArrowUpRight className="mt-0.5 h-4 w-4 shrink-0 text-slate-400 transition group-hover:text-slate-950" />
+                      </motion.div>
                     </div>
-                  </div>
+                  </motion.div>
                 </motion.article>
               ))}
             </motion.div>
@@ -460,11 +495,11 @@ const Index = () => {
               <h2 className={sectionTitleClass}>Certifications</h2>
             </motion.div>
 
-            <motion.div className="mt-14 grid gap-8 md:grid-cols-2" variants={staggerContainer}>
+            <motion.div className="mt-14 grid gap-8 md:grid-cols-3" variants={staggerContainer}>
               {certifications.map((item) => (
                 <motion.article key={item.name} variants={fadeUp} className="border-t border-slate-400/70 pt-5">
                   <div className="flex items-center gap-3">
-                    <img src={profileImg} alt={item.name} className="h-9 w-9 rounded-full object-cover object-[center_18%]" />
+                    <img src={item.image} alt={item.name} className="h-11 w-11 rounded-full object-cover" />
                     <div>
                       <h3 className="text-sm font-semibold text-slate-950">{item.name}</h3>
                       <p className="text-xs uppercase tracking-[0.22em] text-slate-500">{item.role}</p>
