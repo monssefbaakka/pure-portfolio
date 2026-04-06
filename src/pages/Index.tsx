@@ -198,7 +198,7 @@ const Index = () => {
       >
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-8">
           <a href="#home" className="text-[13px] font-semibold uppercase tracking-[0.32em] text-slate-950">
-            BAAKKA MONSSEF
+            VALEN
           </a>
 
           <nav className="hidden items-center gap-6 text-[11px] font-medium uppercase tracking-[0.26em] text-slate-600 md:flex">
