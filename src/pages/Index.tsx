@@ -221,12 +221,19 @@ const Index = () => {
               className="rounded-sm bg-[#e8edf3] px-6 py-12 text-center md:px-10 md:py-16"
             >
               <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                initial={{ opacity: 0, y: 28, scale: 0.96 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
                 className="text-4xl font-semibold uppercase tracking-[-0.06em] text-slate-950 md:text-6xl"
               >
-                I&apos;M <span className="stroke-text">BAAKKA</span> MONSSEF
+                <motion.span
+                  initial={{ opacity: 0, letterSpacing: "0.2em" }}
+                  animate={{ opacity: 1, letterSpacing: "-0.06em" }}
+                  transition={{ duration: 1, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+                  className="inline-block"
+                >
+                  I&apos;M <span className="stroke-text">BAAKKA</span> MONSSEF
+                </motion.span>
               </motion.h1>
               <motion.div
                 initial={{ opacity: 0, y: 18 }}
@@ -286,7 +293,7 @@ const Index = () => {
             <motion.div className="grid gap-8 md:grid-cols-[1.4fr_0.9fr]" variants={fadeUp}>
               <div className="space-y-7">
                 <h2 className="max-w-xl text-3xl font-medium leading-[1.35] tracking-[-0.05em] text-slate-950 md:text-[46px]">
-                  Hello, I&apos;m Monssef Baakka, an EMSI engineering student specialized in software development with a strong focus on algorithms, architecture, and modern backend systems.
+                  Hello, I&apos;m Monssef Baakka, an EMSI student focused on software development, backend systems, and problem solving.
                 </h2>
                 <motion.a
                   href={cvHref}
