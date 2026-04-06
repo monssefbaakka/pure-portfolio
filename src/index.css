@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Questrial&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -7,38 +7,25 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 0 0% 8%;
-
-    --card: 0 0% 97%;
-    --card-foreground: 0 0% 8%;
-
+    --foreground: 222 47% 11%;
+    --card: 210 33% 96%;
+    --card-foreground: 222 47% 11%;
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 8%;
-
-    --primary: 0 0% 8%;
+    --popover-foreground: 222 47% 11%;
+    --primary: 222 47% 11%;
     --primary-foreground: 0 0% 100%;
-
-    --secondary: 40 20% 96%;
-    --secondary-foreground: 0 0% 8%;
-
-    --muted: 40 10% 95%;
-    --muted-foreground: 0 0% 45%;
-
-    --accent: 40 20% 96%;
-    --accent-foreground: 0 0% 8%;
-
-    --destructive: 0 84.2% 60.2%;
+    --secondary: 210 33% 96%;
+    --secondary-foreground: 222 47% 11%;
+    --muted: 210 33% 96%;
+    --muted-foreground: 215 16% 47%;
+    --accent: 210 33% 96%;
+    --accent-foreground: 222 47% 11%;
+    --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
-
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 8%;
-
-    --radius: 0.75rem;
-
-    --font-heading: 'Playfair Display', serif;
-    --font-body: 'DM Sans', sans-serif;
-
+    --border: 214 25% 88%;
+    --input: 214 25% 88%;
+    --ring: 222 47% 11%;
+    --radius: 0.125rem;
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
@@ -48,32 +35,45 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply bg-background text-foreground font-body antialiased;
+    @apply bg-white text-slate-950 antialiased;
+    font-family: "Manrope", sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-family: var(--font-heading);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Questrial", sans-serif;
+  }
+
+  a {
+    @apply outline-none;
   }
 }
 
-@layer utilities {
-  .section-padding {
-    @apply px-6 md:px-12 lg:px-24 py-20 md:py-32;
+@layer components {
+  .eyebrow {
+    @apply text-[10px] uppercase tracking-[0.28em] text-slate-400;
   }
 
-  .section-label {
-    @apply text-xs uppercase tracking-[0.3em] text-muted-foreground font-body font-medium mb-4;
+  .contact-input {
+    @apply w-full rounded-sm border border-slate-200 bg-[#f8fafc] px-4 py-3 text-sm text-slate-950 outline-none transition placeholder:text-slate-400 focus:border-slate-400 focus:bg-white;
   }
-}
 
-html {
-  scroll-behavior: smooth;
+  .stroke-text {
+    color: transparent;
+    -webkit-text-stroke: 1px #0f172a;
+  }
 }
