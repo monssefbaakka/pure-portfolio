@@ -164,7 +164,7 @@ const Index = () => {
       <header className="sticky top-0 z-50 border-b border-black/5 bg-white/95 backdrop-blur">
         <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5 md:px-8">
           <a href="#home" className="text-[13px] font-semibold uppercase tracking-[0.32em] text-slate-950">
-            KANE
+            BAAKKA MONSSEF
           </a>
 
           <nav className="hidden items-center gap-6 text-[11px] font-medium uppercase tracking-[0.26em] text-slate-600 md:flex">
@@ -182,14 +182,14 @@ const Index = () => {
           <div className="mx-auto max-w-6xl">
             <div className="rounded-sm bg-[#e8edf3] px-6 py-12 text-center md:px-10 md:py-16">
               <h1 className="text-4xl font-semibold uppercase tracking-[-0.06em] text-slate-950 md:text-6xl">
-                I&apos;M <span className="stroke-text">KANE</span> WALKER
+                I&apos;M <span className="stroke-text">BAAKKA</span> MONSSEF
               </h1>
               <div className="mx-auto mt-5 inline-flex flex-wrap items-center justify-center gap-3 bg-white px-5 py-2 text-[11px] uppercase tracking-[0.24em] text-slate-500 shadow-[0_1px_0_rgba(15,23,42,0.06)]">
-                <span>UI Designer</span>
+                <span>EMSI Student</span>
                 <span className="h-1 w-1 rounded-full bg-slate-300" />
-                <span>Framer Developer</span>
+                <span>Frontend Developer</span>
                 <span className="h-1 w-1 rounded-full bg-slate-300" />
-                <span>Web Developer</span>
+                <span>Portfolio Owner</span>
               </div>
             </div>
           </div>
@@ -199,10 +199,10 @@ const Index = () => {
           <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[280px_1fr] md:gap-12">
             <div>
               <div className="overflow-hidden rounded-sm bg-[#d8c4b4]">
-                <img src={profileImg} alt="Kane Walker" className="h-[300px] w-full object-cover" />
+                <img src={profileImg} alt="BAAKKA Monssef" className="h-[300px] w-full object-cover" />
               </div>
               <div className="px-3 py-4 text-center">
-                <h2 className="text-lg font-semibold tracking-[-0.03em]">Kane Walker</h2>
+                <h2 className="text-lg font-semibold tracking-[-0.03em]">BAAKKA Monssef</h2>
                 <div className="mt-3 flex items-center justify-center gap-2 text-[10px] uppercase tracking-[0.26em] text-slate-500">
                   <span>Available for work</span>
                   <span className="h-2 w-2 rounded-full bg-lime-400" />
@@ -225,7 +225,7 @@ const Index = () => {
             <div className="grid gap-8 md:grid-cols-[1.4fr_0.9fr]">
               <div>
                 <h2 className="max-w-xl text-3xl font-medium leading-[1.35] tracking-[-0.05em] text-slate-950 md:text-[46px]">
-                  Hello, I’m Kane Walker, Framer Developer and UX / UI Designer Based in California.
+                  Hello, I’m BAAKKA Monssef, a 4th year EMSI student focused on frontend development and modern digital experiences.
                 </h2>
                 <a
                   href="#contact"
@@ -238,19 +238,19 @@ const Index = () => {
               <div className="grid gap-5 pt-2 text-sm text-slate-500 sm:grid-cols-2 md:grid-cols-1">
                 <div className="border-t border-slate-200 pt-4">
                   <div className="text-[10px] uppercase tracking-[0.24em]">Address</div>
-                  <div className="mt-2 text-slate-950">20, California, USA</div>
+                  <div className="mt-2 text-slate-950">Morocco</div>
                 </div>
                 <div className="border-t border-slate-200 pt-4">
                   <div className="text-[10px] uppercase tracking-[0.24em]">Email</div>
-                  <div className="mt-2 text-slate-950">hello@kanewalker.com</div>
+                  <div className="mt-2 text-slate-950">monssefbaakka@gmail.com</div>
                 </div>
                 <div className="border-t border-slate-200 pt-4">
                   <div className="text-[10px] uppercase tracking-[0.24em]">Phone</div>
-                  <div className="mt-2 text-slate-950">+00 202 555 0149</div>
+                  <div className="mt-2 text-slate-950">Available on request</div>
                 </div>
                 <div className="border-t border-slate-200 pt-4">
                   <div className="text-[10px] uppercase tracking-[0.24em]">Freelance</div>
-                  <div className="mt-2 text-slate-950">Available Now</div>
+                  <div className="mt-2 text-slate-950">4th Year EMSI Student</div>
                 </div>
               </div>
             </div>
@@ -488,21 +488,21 @@ const Index = () => {
                     <MapPin className="mt-1 h-4 w-4 text-slate-950" />
                     <div>
                       <div className="text-[10px] uppercase tracking-[0.24em] text-slate-500">Address</div>
-                      <div className="mt-2 text-slate-950">20 California, United States</div>
+                      <div className="mt-2 text-slate-950">Morocco</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <Phone className="mt-1 h-4 w-4 text-slate-950" />
                     <div>
                       <div className="text-[10px] uppercase tracking-[0.24em] text-slate-500">Phone Number</div>
-                      <div className="mt-2 text-slate-950">+00 202 555 0149</div>
+                      <div className="mt-2 text-slate-950">Available on request</div>
                     </div>
                   </div>
                   <div className="flex gap-4">
                     <Mail className="mt-1 h-4 w-4 text-slate-950" />
                     <div>
                       <div className="text-[10px] uppercase tracking-[0.24em] text-slate-500">Email</div>
-                      <div className="mt-2 text-slate-950">hello@kanewalker.com</div>
+                      <div className="mt-2 text-slate-950">monssefbaakka@gmail.com</div>
                     </div>
                   </div>
                 </div>
@@ -530,7 +530,7 @@ const Index = () => {
       </main>
 
       <footer className="border-t border-slate-200 px-6 py-8 text-center text-sm text-slate-500 md:px-8">
-        Copyright 2024 Kane Walker. All Rights Reserved.
+        Copyright 2024 BAAKKA Monssef. All Rights Reserved.
       </footer>
     </div>
   );
