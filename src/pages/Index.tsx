@@ -14,7 +14,7 @@ import {
   Phone,
   Twitter,
 } from "lucide-react";
-import profileImg from "@/assets/profile.jpg";
+import profileImg from "@/assets/monssef-profile.jpg";
 import work1 from "@/assets/work1.jpg";
 import work2 from "@/assets/work2.jpg";
 import work3 from "@/assets/work3.jpg";
@@ -199,7 +199,11 @@ const Index = () => {
           <div className="mx-auto grid max-w-6xl gap-10 md:grid-cols-[280px_1fr] md:gap-12">
             <div>
               <div className="overflow-hidden rounded-sm bg-[#d8c4b4]">
-                <img src={profileImg} alt="BAAKKA Monssef" className="h-[300px] w-full object-cover" />
+                <img
+                  src={profileImg}
+                  alt="BAAKKA Monssef"
+                  className="h-[360px] w-full object-cover object-[center_18%] md:h-[420px]"
+                />
               </div>
               <div className="px-3 py-4 text-center">
                 <h2 className="text-lg font-semibold tracking-[-0.03em]">BAAKKA Monssef</h2>
